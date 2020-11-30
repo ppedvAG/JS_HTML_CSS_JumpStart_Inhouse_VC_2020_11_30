@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+}
+
+
+
+/* Typ-Selektor */
+p{
+    font-style: italic;
+    color: blue;
+}
+
+/* Klassen-Selektor (class selector) */
+.demo-class-01{
+    color: chartreuse;
+}
+
+/* ID-Selektor */
+#demo-id-01{
+    font-weight: bold;
+}
+
+#demo-id-02{
+    color: red;
+}
+
+/* ***************************************************************** */
+
+.demo-div-01{
+    height: 100px;
+    width: 400px;
+    background-color: cornflowerblue;
+}
+
+.demo-div-02{
+    height: 100px;
+    width: 150px;
+    background-color: rgb(16, 54, 124);
+/* 
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(187, 206, 243);
+*/
+    border: 2px solid rgb(187, 206, 243);
+
+}
+
+
+.demo-class-02{
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    /* font-style: italic;
+    font-weight: bold; */
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* LoVe/HAte  Eselsbrücke für link -> visited -> hover -> active */
+
+a:link{
+    color: blue;
+}
+
+a:visited{
+    color: aqua;
+}
+
+a:hover{
+    color: chartreuse;
+}
+
+a:active{
+    color: red;
+}
+

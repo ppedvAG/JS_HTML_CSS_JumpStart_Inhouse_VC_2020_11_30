@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxmodell</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            font-size: 44px;
+            color: white;
+        }
+
+        .demo01 {
+            background-color: navy;
+            /* margin: 50px; */
+        }
+
+        .demo02 {
+            background-color: rgb(59, 59, 187);
+            padding: 50px;
+        }
+
+        .demo03 {
+            background-color: rgb(135, 135, 216);
+            padding: 50px;
+            border: 10px solid rgb(0, 0, 59);
+        }
+
+        .demo04 {
+            background-color: rgb(203, 203, 241);
+        }
+
+        .demo05 {
+            background-color: rgb(82, 82, 153);
+            padding: 50px;
+            border: 10px solid rgb(0, 0, 59);
+            box-sizing: border-box;
+        }
+
+        .demo06 {
+            background-color: rgb(31, 31, 93);
+            margin-bottom: 25px;
+        }
+
+        .demo07 {
+            margin-top: 50px;
+            background-color: rgb(3, 3, 34);
+        }
+
+
+        .demo08 {
+            margin: 5px 0 50px 20px;
+            background-color: rgb(65, 65, 109);
+        }
+
+        .demo09 {
+            background-color: rgb(139, 139, 168);
+        }
+
+        .demo10 {
+            margin: 20px 50px;
+            background-color: rgb(204, 204, 223);
+        }
+
+        .demo11 {
+            background-color: rgb(120, 120, 209);
+        }
+
+
+        .container{
+            width: 250px;
+            height: 250px;
+            background-color: navy;
+            border: 2px solid lightblue;
+            padding: 20px 0 70px 5px;
+            box-sizing: border-box;
+        }
+
+        .inner-div-01{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border: 2px solid rgb(220, 243, 198);
+        }
+
+        .inner-div-02{
+            width: 100%;
+            height: 100%;
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo01">01</div>
+    <div class="demo02">02</div>
+    <div class="demo03">03</div>
+    <div class="demo04">04</div>
+    <div class="demo05">05</div>
+    <div class="demo06">06</div>
+    <div class="demo07">07</div>
+    <div class="demo08">08</div>
+    <div class="demo09">09</div>
+    <div class="demo10">10</div>
+    <div class="demo11">11</div>
+
+    <div class="container">
+        <div class="inner-div-01"></div>
+    </div>
+    
+    <div class="container">
+        <div class="inner-div-02"></div>
+    </div>
+
+</body>
+
+</html>
