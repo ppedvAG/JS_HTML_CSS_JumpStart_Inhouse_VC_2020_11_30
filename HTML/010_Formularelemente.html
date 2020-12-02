@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularelemente</title>
+    <style>
+        .lbl-inp-container {
+            margin-bottom: 5px;
+        }
+
+        .lbl-demo {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="POST">
+        <div class="lbl-inp-container">
+            <label for="inp-first-name" class="lbl-demo">Vorname:</label>
+            <input type="text" class="inp-demo" id="inp-first-name" name="first-name" placeholder="Max">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="inp-last-name" class="lbl-demo">Nachname:</label>
+            <input type="text" class="inp-demo" id="inp-last-name" name="last-name" placeholder="Mustermann">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="inp-pw" class="lbl-demo">Passwort:</label>
+            <input type="password" class="inp-demo" id="inp-pw" name="pw">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="inp-num" class="lbl-demo">Zahl:</label>
+            <input type="number" class="inp-demo" id="inp-num" name="num" min="0" max="130" step="1">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="inp-email" class="lbl-demo">Email:</label>
+            <input type="email" class="inp-demo" id="inp-email" name="email">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="hp" class="lbl-demo">Homepage:</label>
+            <input type="url" class="inp-demo" id="inp-url" name="hp" placeholder="https://muster.de" value="https://"
+                title="Bitte geben Sie https://... ein.">
+        </div>
+
+        <div class="lbl-inp-container">
+            <label for="inp-range" class="lbl-demo">Bereich:</label>
+            <input type="range" class="inp-demo" id="inp-range" name="range">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="inp-color" class="lbl-demo">Farbe:</label>
+            <input type="color" class="inp-demo" id="inp-color" name="color">
+        </div>
+        <fieldset>
+            <legend>Pizze</legend>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizze" checked><label for="">Margherita</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizze"><label for="">Tonno</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizze"><label for="">Della Casa</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizze"><label for="">Funghi</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras"><label for="">Mozzarella</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras"><label for="">Mais</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras"><label for="">Ei</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras"><label for="">Salami</label>
+            </div>
+        </fieldset>
+        <div class="lbl-inp-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+</body>
+
+</html>

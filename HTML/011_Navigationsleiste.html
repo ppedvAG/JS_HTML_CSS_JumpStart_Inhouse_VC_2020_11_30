@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigationsleiste</title>
+    <style>
+        :root{
+            font-size: 20px;
+        }
+
+        body{
+            margin: 0;
+        }
+
+        .company-name-container{
+            height: 100px;
+            background-color: navy;
+            padding: 1em;
+            color: white;
+            font-family: "Bauhaus 93", sans-serif;
+            font-size: 6vw;
+        }
+
+        .main-nav{
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            background-color: rgb(0, 0, 46);
+        }
+
+        .main-nav::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        li{
+            float: left;
+            /* background-color: orange; */
+        }
+
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: .5rem 1.5rem;
+            /* background-color: orangered; */
+        }
+
+        a:hover{
+            background-color: orange;
+            /* color: navy; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="company-name-container">
+            MyGreatCompany
+        </div>
+        <nav class="main-nav-container">
+            <ul class="main-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Formular</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+</body>
+</html>

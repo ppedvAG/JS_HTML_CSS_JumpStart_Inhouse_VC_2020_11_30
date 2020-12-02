@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs Inline</title>
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        body {
+            margin: 0;
+            padding-bottom: 300px;
+            /* NICHT nachmachen, nur für dieses Beispiel */
+        }
+
+        span {
+            color: chartreuse;
+        }
+
+        .inp-container {
+            margin-bottom: 5px;
+        }
+
+        .inline-demo {
+            /* display: inline; */
+            width: 100px;
+        }
+
+        .block-demo {
+            display: block;
+            width: 100px;
+            /* background-color: chartreuse; */
+        }
+
+        .inline-block-demo {
+            display: inline-block;
+            width: 100px;
+            /* background-color: chartreuse; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Block vs Inline</h1>
+    <div>
+        Das ist Text in einem Div.
+        <a href="#">Lorem</a>, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatum officia eveniet iste
+        sapiente autem
+        officiis, vero quod beatae, debitis incidunt? <span>Ipsa et dolore, molestiae soluta rem excepturi</span> velit
+        porro
+        similique exercitationem inventore id aperiam iure, praesentium expedita delectus dolorum cupiditate. Error
+        libero accusantium atque rerum ratione sed id, quia eaque ab totam suscipit praesentium optio incidunt odit.
+        Natus dolorum maxime distinctio quis quod soluta itaque, sunt eius officiis nihil earum delectus atque
+        aspernatur, ipsa totam rem incidunt exercitationem repellat laudantium optio vero! Perspiciatis amet, autem
+        fugit magnam quisquam debitis sit veniam. Minus quisquam esse optio incidunt iusto, pariatur expedita!
+    </div>
+    <p>
+        Das ist Text in einem P.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti nam assumenda aliquam laboriosam
+        vero iure quisquam eius dolorum sit.
+    </p>
+
+    <img src="../images/coffee.jpg" alt="">
+    <img src="../images/clouds-over-the-mountains.jpg" alt="mountains">
+
+    <label for="">Vorname: </label>
+    <input type="text">
+    <label for="">Nachname: </label>
+    <input type="text">
+
+    <h2>inline-Demo</h2>
+
+    <div class="inp-container">
+        <label for="" class="inline-demo">Vorname: </label>
+        <input type="text">
+    </div>
+    <div class="inp-container">
+        <label for="" class="inline-demo">Nachname: </label>
+        <input type="text">
+    </div>
+
+
+    <h2>Block-Demo</h2>
+
+    <div class="inp-container">
+        <label for="" class="block-demo">Vorname: </label>
+        <input type="text">
+    </div>
+    <div class="inp-container">
+        <label for="" class="block-demo">Nachname: </label>
+        <input type="text">
+    </div>
+
+
+    <h2>Inline-Block-Demo</h2>
+
+    <div class="inp-container">
+        <label for="" class="inline-block-demo">Vorname: </label>
+        <input type="text">
+    </div>
+    <div class="inp-container">
+        <label for="" class="inline-block-demo">Nachname: </label>
+        <input type="text">
+    </div>
+
+
+
+</body>
+
+</html>

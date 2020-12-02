@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        .float-container {
+            background-color: chartreuse;
+            /* border: 5px solid red; */
+        }
+
+        .float-item {
+            height: 200px;
+            width: 200px;
+            background-color: forestgreen;
+            border: 2px solid rgb(0, 54, 0);
+            float: left;
+            /* margin: 5px; */
+        }
+/* 
+        .clearboth{
+            clear: both;
+        }
+ */
+
+        .float-container::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        .container {
+            background-color: gold;
+            height: 500px;
+        }
+
+        .inline-container{
+            background-color: lightblue;
+        }
+
+        .inline-div{
+            height: 200px;
+            width: 200px;
+            background-color: dodgerblue;
+            border: 2px solid rgb(4, 52, 100);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="float-container">
+        <div class="float-item">01</div>
+        <div class="float-item">02</div>
+        <div class="float-item">03</div>
+        <div class="float-item">04</div>
+        <div class="float-item">05</div>
+        <div class="float-item">06</div>
+        <div class="float-item">07</div>
+        <div class="float-item">08</div>
+        <div class="float-item">09</div>
+        <!-- <div class="clearboth"></div> -->
+    </div>
+    <div class="inline-container">
+        <div class="inline-div">01</div>
+        <div class="inline-div">02</div>
+        <div class="inline-div">03</div>
+        <div class="inline-div">04</div>
+        <div class="inline-div">05</div>
+        <div class="inline-div">06</div>
+        <div class="inline-div">07</div>
+        <div class="inline-div">08</div>
+        <div class="inline-div">09</div>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati labore itaque soluta, vel adipisci odio.
+        Reiciendis nam iure ab, repudiandae placeat fugit neque aut id quas explicabo sapiente cumque repellat minima
+        modi odit perferendis cupiditate vitae velit fugiat, dicta magni, sunt ratione laboriosam. Ipsam illum
+        exercitationem impedit dolorum consequuntur modi sequi, aspernatur perferendis eius consectetur quo tempora
+        molestiae voluptate repudiandae aliquam hic provident, enim sed dignissimos commodi repellat itaque. Beatae qui
+        id ipsa mollitia amet numquam aspernatur nostrum magnam, explicabo, repudiandae officia dolore at vel deserunt.
+        Officiis, illo! Amet, quo nobis dicta omnis iusto consequatur vitae rem dolor error voluptate.
+    </div>
+
+</body>
+
+</html>
