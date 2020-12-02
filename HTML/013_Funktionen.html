@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen</title>
+    <!-- <script src="../JS/main.js"></script> -->
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        .demo01 {
+            border: 2px solid blue;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        .demo02 {
+            border: 2px solid red;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        .demo03 {
+            border: 2px solid green;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        /* 
+            .demo01:hover{
+                background-color: greenyellow;
+            }
+        */
+    </style>
+</head>
+
+<body>
+
+    <div class="demo01" id="demo01"></div>
+    <div class="demo02" id="demo02"></div>
+    <div class="demo03" id="demo03"></div>
+    <button id="btn-ok">OK</button>
+
+
+    <script>
+
+        var demoDiv1 = document.getElementById('demo01');
+        var demoDiv2 = document.getElementById('demo02');
+        var demoDiv3 = document.getElementById('demo03');
+        var btnOk = document.getElementById('btn-ok');
+
+
+        function bgCol() {
+            demoDiv1.style.backgroundColor = 'lightblue';
+        }
+
+        // Funktionsaufruf (function call)
+
+        // bgCol();
+
+        /* function call mit Event Listener */
+        demoDiv1.addEventListener('mouseover', bgCol);
+
+
+        /* anonyme Funktion: */
+        /* 
+            demoDiv1.addEventListener('mouseout', function(){
+                demoDiv1.style.backgroundColor = 'initial';
+            });
+        */
+
+        /* mit this: funktioniert nur dann, wenn wir etwas mit dem Element machen wollen,
+            das wir schon angesprochen haben (demoDiv1) */
+        demoDiv1.addEventListener('mouseout', function () {
+            this.style.backgroundColor = 'initial';
+        });
+
+
+        // Parameter übergeben
+
+        function demoCalc(a, b){
+            return a * b;
+        }
+
+
+        console.log(demoCalc(5, 3));
+        
+        console.log(demoCalc(2, 10));
+
+        console.log(demoCalc(15, 73));
+        
+        console.log(demoCalc(123455, 87653));
+
+/* 
+        function testFunction(a, b){
+            if(a === undefined){
+                return b;
+            }
+            if(b === undefined){
+                return a;
+            }
+
+        }
+
+ */
+
+    </script>
+</body>
+
+</html>

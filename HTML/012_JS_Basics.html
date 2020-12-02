@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+    <!-- <link rel="stylesheet" href="../CSS/main.css"> -->
+    <!-- 
+    <link rel="stylesheet" href="../CSS/main2.css">
+    <link rel="stylesheet" href="../CSS/main3.css">
+ -->
+    <script src="../JS/main.js" defer></script>
+    <!-- 
+    <script src="../JS/main2.js"></script>
+    <script src="../JS/main3.js"></script>
+ -->
+
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        body{
+            /* background-color: chartreuse; */
+        }
+
+        .demo {
+            border: 2px solid green;
+            padding: 1em 2em;
+            min-height: 1em;
+            line-height: 1em;
+            width: 25%;
+            margin-bottom: 1em;
+        }
+
+        .blue {
+            border: 2px solid blue;
+            padding: 1em 2em;
+            min-height: 1em;
+            line-height: 1em;
+            width: 25%;
+            margin-bottom: 1em;
+            background-color: rgb(127, 255, 0);
+        }
+
+        .red {
+            border: 2px solid red;
+            padding: 1em 2em;
+            min-height: 1em;
+            line-height: 1em;
+            width: 25%;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="demo" id="demo"></div>
+    <div class="blue" id="blue">Testtext + neuer Text</div>
+    <div class="red" id="red"></div>
+
+
+    <script>
+
+        // einzeilige Kommentare
+        /* mehrzeilige
+            Kommentare
+        */
+
+        /*
+            // verschachtelte Kommentare
+        */
+
+        /* 
+                    // Konstanten
+        
+                    const MwSt = 0.19;
+        */
+
+        /* Variablen */
+        /* Variablendeklaration */
+
+        var x;
+        var text;
+        var firstName;
+
+        /* mehrere Variablen auf einmal deklarieren */
+
+        var i, z, fullName;
+
+
+        /* Initialisierung */
+
+        x = 5;
+
+
+        /* Deklaration und Initialisierung kombiniert */
+
+        var y = 3;
+
+        var a, b, c = 5;
+
+        var d = a + b;
+
+
+        console.log('Hallo!');
+
+
+        console.log(x);
+
+        console.log("Der aktuelle Wert von x ist: " + x + ".");
+
+        console.log(x + y);
+
+        x = x + 10;
+
+        console.log("Der aktuelle Wert von x ist: " + x + ".");
+        /* der aktuelle Wert ist jetzt 15 */
+        x = x + y;
+
+        console.log("Der aktuelle Wert von x ist: " + x + ".");
+        // 18
+
+        x = x + 5;
+        x += 5;
+
+
+        x = x + 1;
+        x++;
+
+        x = x - 1;
+        x--;
+
+
+        /* Operatoren */
+        /* 
+            +, -, *, /
+
+            ++, --     // increment, decrement
+
+            +=, -=, *=, /=
+
+            %     // Modulus-Operator
+
+
+            // Vergleichsoperatoren
+
+            ==, <=, >=, !=
+            ===, !==       // fragt auch Datentyp ab
+
+
+            // logische Operatoren
+
+            &&     // logisches UND
+            ||     // logisches ODER
+            !      // logisches NICHT
+        
+        
+        */
+
+        z = 3;
+        a = "3";
+
+        console.log("Wert für x: " + x);
+        console.log("Wert für y: " + y);
+        console.log("Entspricht der Wert von x dem Wert von y? " + (x == y));
+        console.log("Entspricht der Wert von z dem Wert von y? " + (z == y));
+        console.log("Entspricht der Wert von z dem Wert von a? " + (z == a));
+        console.log("Entspricht der Datentyp von z dem Datentyp von a? " + (z === a));
+
+
+        /* Datentypen */
+        /* 
+        
+            number (Zahl)
+                5
+                -5
+                5.3
+                3.333333333333333333333333333333
+                123e5 (Exponentialschreibweise) 12300000
+                123e-5                          0.00123
+
+
+            string (Text)
+                'Text'
+                "Text"
+                'das ist ein "String"'
+                "das ist ein 'String'"
+
+
+            boolean
+                true/false
+
+            object (Objekt)
+
+            undefined (noch nicht definiert)
+        
+        */
+
+        console.log('das ist ein "String"');
+
+        console.log("Der Datentyp von x ist: " + typeof x);
+        console.log("Der Datentyp von 'text' ist: " + typeof text);
+
+        console.log(isNaN(x));
+
+
+        firstName = 'James';
+
+        var lastName = 'Bond';
+
+        console.log(firstName + lastName);
+
+
+        console.log(firstName + " " + lastName);
+
+        fullName = firstName + " " + lastName;
+
+        console.log(fullName);
+
+        console.log("Vollständiger Name lautet: " + firstName + " " + lastName + ".");
+
+
+        var demoDiv = document.getElementById('demo');
+
+
+        /* document.getElementById('demo').innerHTML = "Hallo!"; */
+
+
+        demoDiv.innerHTML = "<p>" + "Der vollständige Name lautet: " + fullName + "." + "</p>";
+
+        /* console.log(demoDiv.innerHTML); */
+
+
+        /* Objekte in Variable hinterlegen: */
+        var blueDiv = document.getElementById('blue');
+        var redDiv = document.getElementById('red');
+
+        /* Text aus blauem Div in Variable hinterlegen: */
+        var testtext = blueDiv.innerHTML;
+
+        /* Text aus blauem Div in rotes Div einfügen: */
+        redDiv.innerHTML = testtext;
+
+/* 
+        x = x + 1;
+        x += 1;
+ */
+        text = "Mein Name ist ";
+        text += fullName;
+        text += ".";
+
+        console.log(text);
+
+        redDiv.innerHTML += "<p>" + text + "</p>";
+
+
+       blueDiv.style.backgroundColor = 'rgb(127,255,0)';
+       blueDiv.style.color = 'white';
+
+    </script>
+</body>
+
+</html>

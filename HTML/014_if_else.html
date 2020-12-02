@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else</title>
+    <style>
+        .demo {
+            border: 2px solid green;
+            padding: 1em 2em;
+            min-height: 1em;
+            line-height: 1em;
+            width: 25%;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inp-demo"><!-- mit .value abfragen -->
+    <div class="demo" id="demo"></div><!-- .innerHTML -->
+
+    <script>
+        var demoDiv = document.getElementById('demo');
+        var inpDemo = document.getElementById('inp-demo');
+        /* var x = 5; */
+
+/* 
+        if(x === 5){
+            console.log("X hat den Wert 5.");
+        }
+        else if(x < 5){
+            console.log("X ist kleiner als 5.");
+        }
+        else if(x > 5){
+            console.log("X ist größer als 5.");
+        }
+        else{
+            console.log('Bitte geben Sie eine Zahl ein.');
+        }
+
+ */
+
+       /*  
+        inpDemo.addEventListener('change', function(){
+            demoDiv.innerHTML = inpDemo.value;
+        });
+     */
+
+    
+     
+    
+     function checkVal(){
+
+        var inp = parseInt(inpDemo.value);
+
+        if(inp === 5){
+            demoDiv.innerHTML = "<p>" + "Eingabe hat den Wert 5." + "</p>";
+        }
+        else if(inp < 5){
+            demoDiv.innerHTML = "<p>" + "Eingabe ist kleiner als 5." + "</p>";
+        }
+        else if(inp > 5){
+            demoDiv.innerHTML = "<p>" + "Eingabe ist größer als 5." + "</p>";
+        }
+        else if(isNaN(inp)){
+            demoDiv.innerHTML = "<p>" + "Eingabe ist keine Zahl." + "</p>";
+        }
+        else{
+            demoDiv.innerHTML = "<p>" + "Bitte geben Sie eine Zahl ein." + "</p>";
+        }
+
+     }
+
+     inpDemo.addEventListener('change', checkVal);
+
+        
+
+     /* Kurzschreibweise für Bedingung abfragen */
+
+     // (Bedingung) ? true : false
+     // (Bedingung) ? Anweisung1 : Anweisung2
+
+/* 
+     var a = 5;
+
+     (a === 7) ? alert('Stimmt!') : alert('Stimmt nicht!');
+     
+ */
+    </script>
+</body>
+</html>

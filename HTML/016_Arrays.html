@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        .demo {
+            border: 2px solid green;
+            padding: 1em 2em;
+            min-height: 1em;
+            line-height: 1em;
+            /* width: 25%; */
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn-text">Text</button>
+    <button id="btn-mango">addMango</button>
+    <button id="btn-del">delete last</button>
+    <button id="btn-splice">splice</button>
+    <button id="btn-sort">sort</button>
+    <button id="btn-concat">concat</button>
+    <div class="demo" id="demo"></div>
+
+    <script>
+
+        var fruitSalad = ['Banane', 'Apfel', 'Kiwi'];
+
+        // Stelle im Array       0         1        2    
+        // length                1         2        3
+
+        var citrusFruits = ['Orange', 'Mandarine', 'Kumquat'];
+
+        var allFruits = [];
+
+
+        console.log(fruitSalad[2]);
+        console.log(fruitSalad.length); // wieviele Einträge gibt es im Array?
+
+        var demoDiv = document.getElementById('demo');
+        var btnText = document.getElementById('btn-text');
+        var btnMango = document.getElementById('btn-mango');
+        var btnDel = document.getElementById('btn-del');
+        var btnSplice = document.getElementById('btn-splice');
+        var btnSort = document.getElementById('btn-sort');
+        var btnConcat = document.getElementById('btn-concat');
+
+
+        btnText.addEventListener('click', function () {
+            demoDiv.innerHTML = '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+        btnMango.addEventListener('click', function () {
+            fruitSalad.push('Mango');
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+        btnDel.addEventListener('click', function () {
+            fruitSalad.pop();
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+        /* 
+            splice: einfügen oder ersetzen
+            1... beginnend an dieser Stelle
+            0... so viele weglöschen
+            'Birne', 'Weintrauben',....
+        
+        */
+
+
+        btnSplice.addEventListener('click', function () {
+            fruitSalad.splice(1, 0, 'Birne', 'Weintrauben');
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+        btnSort.addEventListener('click', function () {
+            fruitSalad.sort();
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+        btnConcat.addEventListener('click', function(){
+            allFruits = fruitSalad.concat(citrusFruits);
+            demoDiv.innerHTML += '<p>' + allFruits.join(', ') + '</p>';
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

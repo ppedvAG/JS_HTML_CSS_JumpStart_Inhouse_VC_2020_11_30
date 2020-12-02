@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen</title>
+    <style>
+        .demo {
+            border: 2px solid green;
+            padding: 1em 2em;
+            min-height: 1em;
+            line-height: 1em;
+            width: 25%;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo" id="demo"></div>
+    <button id="btn-ok-1">OK1</button>
+    <button id="btn-ok-2">OK2</button>
+    <button id="btn-blue">Blue</button>
+
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+    <p class="demo-p">Das ist ein Paragraph.</p>
+
+    <script>
+
+        var demoDiv = document.getElementById('demo');
+        var btnOK1 = document.getElementById('btn-ok-1');
+        var btnOK2 = document.getElementById('btn-ok-2');
+        var btnBlue = document.getElementById('btn-blue');
+
+        var text = "";
+
+
+        /* WHILE-Schleife */
+
+        var i = 1; // iterator (Zähler)
+
+        function textOutp() {
+
+            while (i < 11) {
+                text += "<p>" + "Die Schleife wurde " + i + " Mal ausgeführt." + "</p>";
+                // i = i + 1;
+                i++;
+            }
+
+            demoDiv.innerHTML = text;
+        }
+
+        btnOK1.addEventListener('click', textOutp);
+
+
+
+        /* FOR-Schleife */
+
+        function loopCount() {
+
+            /* 
+                for(var j = 10; j > 0; j--){
+                    text += "<p>" + "Zähler steht auf " + j + "." + "</p>";
+                } 
+            */
+
+
+            for (var j = 0; j < 10; j++) {
+                text += "<p>" + "Zähler steht auf " + j + "." + "</p>";
+            }
+
+            demoDiv.innerHTML = text;
+
+        }
+
+
+        btnOK2.addEventListener('click', loopCount);
+
+
+
+        /*
+         for (var j = 0; j < arrayName.length; j++) {
+                 text += "<p>" + "Zähler steht auf " + j + "." + "</p>";
+             }
+  */
+
+
+        btnBlue.addEventListener('click', function () {
+
+            var demoP = document.getElementsByClassName('demo-p');
+
+
+            for (var k = 0; k < demoP.length; k++) {
+                demoP[k].style.color = 'blue';
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
